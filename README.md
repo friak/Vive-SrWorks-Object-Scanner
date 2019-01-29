@@ -47,16 +47,20 @@ We're doing this because we want to create a single child to call back in a new 
 
 ## 2) BoundingBox game object
 
+To create a new game object, we'll be right-clicking the left-hand GUI and we will select 3D object > Cube and we'll name it BoundingBox.
+![Figure Images](https://github.com/friak/Vive-SrWorks-Object-Scanner/blob/master/3.png)
+
 Example 9 includes a beam pointer or RayCast when the trigger is pulled down on the right-hand controller. We're going to be heavily commenting out lines from the two scripts Sample9_SemanticSegmentation.cs and ViveSR_Experience_SemanticDrawer.cs in this example so that the RayCast can be used as a pointer instead of its original functionality, which was to segment items within the static scan (this funtion is not important to what we're doing here). 
 
-Lastly, we'll be attaching the game object BoundingBox to the end point of the RayCast. To do this we'll be adding our own lines of code in the 
+Lastly, we'll be attaching the game object BoundingBox to the end point of the RayCast. To do this we'll be adding our own lines of code in under the UpdateCastLine function, and we will 1) position the game object to the end of the RayCast, 2) Set it active on TriggerDown and 3) inactive on TriggerUp.
+
 ![Figure Images](https://github.com/friak/Vive-SrWorks-Object-Scanner/blob/master/6.png)
 
-Refer to the modified scripts in this respitory to see what has been commented out.
+Refer to the modified scripts in this respitory to see what has been commented out and added.
 
 ## 3) ScanCopy game object
 
-We'll be creating our own custom script for this last set of instructions. Once again, right-click on the left hand GUI to create a new game object.
+We'll be creating our own custom script for this last set of instructions. Once again, right-click on the left hand GUI to create a new game object except this time 
 
 We're going to then add component > new script and name our script ScanCopy.cs 
 
@@ -64,7 +68,7 @@ To make RigidReconstructor globally available to this new game, while viewing Sc
 
 ![Figure Images](https://github.com/friak/Vive-SrWorks-Object-Scanner/blob/master/3.png)
 
-Lastly, we'll be adding the code to ScanCopy.cs (refer to ScanCopy.cs in this repository, detaile comments will also be included within code).
+Lastly, we'll be adding the code to ScanCopy.cs (refer to ScanCopy.cs in this repository, detailed comments will also be included within code).
 
 ## And that's it
 
