@@ -47,7 +47,12 @@ We're doing this because we want to create a single child to call back in a new 
 
 ## 2) BoundingBox game object
 
-Example 9 includes a beam pointer when the trigger is pulled down in the computer, we're going to be heavily commenting out 
+Example 9 includes a beam pointer or RayCast when the trigger is pulled down on the right-hand controller. We're going to be heavily commenting out lines from the two scripts Sample9_SemanticSegmentation.cs and ViveSR_Experience_SemanticDrawer.cs in this example so that the RayCast can be used as a pointer instead of its original functionality, which was to segment items within the static scan (this funtion is not important to what we're doing here). 
+
+Lastly, we'll be attaching the game object BoundingBox to the end point of the RayCast. To do this we'll be adding our own lines of code in the 
+![Figure Images](https://github.com/friak/Vive-SrWorks-Object-Scanner/blob/master/6.png)
+
+Refer to the modified scripts in this respitory to see what has been commented out.
 
 ## 3) ScanCopy game object
 
